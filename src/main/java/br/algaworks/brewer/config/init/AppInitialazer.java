@@ -2,6 +2,7 @@ package br.algaworks.brewer.config.init;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import br.algaworks.brewer.config.JPAConfig;
 import br.algaworks.brewer.config.WebConfig;
 
 public class AppInitialazer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -9,7 +10,7 @@ public class AppInitialazer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 	
-		return null;
+		return new Class<?>[] {JPAConfig.class};
 	}
 
 	@Override
