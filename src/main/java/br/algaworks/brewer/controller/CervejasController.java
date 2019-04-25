@@ -1,5 +1,7 @@
 package br.algaworks.brewer.controller;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -26,7 +28,7 @@ public class CervejasController {
 	@RequestMapping("/cervejas/novo")
 	public String novo(Cerveja cerveja) {
 		
-		cervejas.findAll(); // Apagar...
+		Optional<Cerveja> cervejaOptional = cervejas.findBySku("AA0101"); //apagar
 
 		return "cerveja/CadastroCerveja";
 	}
